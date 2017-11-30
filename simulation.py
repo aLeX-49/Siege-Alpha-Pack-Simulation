@@ -107,7 +107,7 @@ plt.show()
 
 
 current_chance = 3
-games_played = 100000
+games_played = 10000000
 packs_won = 0
 
 for i in range(0, games_played):
@@ -117,6 +117,8 @@ avg_games_per_pack = round(games_played / packs_won, 4)
 print('\nstatistics for casual games:')
 print('packs won: ' + str(packs_won))
 print('average games per pack ' + str(avg_games_per_pack))
+
+packs_won = 0
 
 for j in range(0, games_played):
     current_chance, packs_won = roll_ranked(current_chance, win_rate, packs_won)
