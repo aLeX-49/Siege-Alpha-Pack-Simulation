@@ -12,7 +12,7 @@ def game_outcome(rate):
 def roll_casual(chance, rate, packs):
     if game_outcome(rate):
         if random.randrange(1, 100) <= chance:
-            chance = 3
+            chance = 2
             packs += 1
             return chance, packs
         else:
@@ -38,7 +38,7 @@ def roll_ranked(chance, rate, packs):
 
 
 def sequence_convergence_casual(rate, games):
-    current_chance = 3
+    current_chance = 2
     games_per_pack = []
     packs_won_temp = 0
 
@@ -107,7 +107,7 @@ plt.show()
 
 
 current_chance = 3
-games_played = 10000000
+games_played = 100000
 packs_won = 0
 
 for i in range(0, games_played):
