@@ -19,13 +19,8 @@ def roll_casual(chance, rate, packs):
             chance = chance + 2
             return chance, packs
     else:
-        if random.randrange(1, 100) <= chance:
-            chance = 3
-            packs += 1
-            return chance, packs
-        else:
-            chance = chance + 1.5
-            return chance, packs
+        chance = chance + 1.5
+        return chance, packs
 
 
 def roll_ranked(chance, rate, packs):
@@ -38,13 +33,8 @@ def roll_ranked(chance, rate, packs):
             chance = chance + 3
             return chance, packs
     else:
-        if random.randrange(1, 100) <= chance:
-            chance = 3
-            packs += 1
-            return chance, packs
-        else:
-            chance = chance + 2.5
-            return chance, packs
+        chance = chance + 2.5
+        return chance, packs
 
 
 def sequence_convergence_casual(rate, games):
@@ -93,7 +83,7 @@ print(sequence_ranked)
 fig_casual = plt.figure()
 ax = fig_casual.add_subplot(111)
 ax.plot(games_played, sequence_casual)
-plt.ylim([5, 12])
+plt.ylim([8, 15])
 
 ax.set_xlabel('Number of games played')
 ax.set_ylabel('Games played per Alpha pack')
@@ -106,7 +96,7 @@ plt.show()
 fig_ranked = plt.figure()
 ax = fig_ranked.add_subplot(111)
 ax.plot(games_played, sequence_ranked)
-plt.ylim([5, 12])
+plt.ylim([8, 15])
 
 ax.set_xlabel('Number of games played')
 ax.set_ylabel('Games played per Alpha pack')
@@ -117,7 +107,7 @@ plt.show()
 
 
 current_chance = 3
-games_played = 100000000
+games_played = 10000000
 packs_won = 0
 
 for i in range(0, games_played):
