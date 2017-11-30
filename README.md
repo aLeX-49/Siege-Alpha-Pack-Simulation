@@ -9,4 +9,4 @@ Since Alpha Packs were released, I've been wondering how many games I would need
 The same applies to Ranked games, just swap 2% for 2.5% and 1.5% for 2%.
 
 It turns out that the expected number of games to play before receiving an Alpha Pack is 8.58 for Casual, and 3.91 for Ranked (that's the average over 1,000,000,000 simulated games).
-Here is a graph of what the convergence looks like over time: https://imgur.com/wuY9Bnk
+Here is a graph of what the convergence looks like over time: https://imgur.com/np9f6hb
